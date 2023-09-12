@@ -69,7 +69,7 @@ export const projectsData = [
   {
     title: "TrailerMax",
     description:
-      "A movie streaming site",
+      "A movie streaming site.",
     tags: ["React", "CSS", "RestAPI"],
     url: "https://trailermax.netlify.app/",
     imageUrl: trailermaxImg,

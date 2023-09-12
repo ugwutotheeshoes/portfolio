@@ -14,24 +14,11 @@ export default function About() {
       id="about"
     >
       <p>
-        My core stacks
-        are{" "}
-        <span className="font-medium">
-          React and Next.js
-        </span>{" "}. I am also a bit familiar with Vue and React-Native. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I love the
-        feeling of finally figuring out a solution to a problem.
-      </p>
-
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games and watching movies. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">TypeScript</span>.
+      Dedicated and results-driven Frontend Developer with a passion for creating visually 
+      appealing and user-friendly web applications. Proficient in modern web technologies, 
+      such as React, React-Native, and Next.js. Adept at collaborating with cross-functional teams to 
+      bring innovative designs to life and optimize user experiences. 
+      Strong problem-solving skills and a commitment to staying up-to-date with industry trends.
       </p>
     </motion.section>
   );
