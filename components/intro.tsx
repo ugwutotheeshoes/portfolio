@@ -59,7 +59,7 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bolder">Hi there, I'm Emmanuel Ugwu</span>
-        <span className="font-bold uppercase text-stone-800">frontend developer & technical writer</span>
+        <span className="font-bold uppercase">frontend developer & technical writer</span>
       </motion.div>
 
       <About />
