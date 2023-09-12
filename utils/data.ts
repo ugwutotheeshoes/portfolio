@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import testingImg from "@/utils/assets/testing.jpg";
 import moneyImg from "@/utils/assets/money.jpg";
 import calenderImg from "@/utils/assets/calender.jpg";
-import sevanisImg from "@/utils/assets/sevanis.png";
+import sevanisImg from "@/utils/assets/Sevanis.png";
 import trailermaxImg from "@/utils/assets/trailermax.png";
 
 
