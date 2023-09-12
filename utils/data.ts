@@ -61,7 +61,7 @@ export const projectsData = [
   {
     title: "Sevanis",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+    "An e-commerce furniture store.",
     tags: ["React", "CSS", "Stripe"],
     url: "https://sevanis.netlify.app/",
     imageUrl: sevanisImg,
@@ -69,7 +69,7 @@ export const projectsData = [
   {
     title: "TrailerMax",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "A movie streaming site",
     tags: ["React", "CSS", "RestAPI"],
     url: "https://trailermax.netlify.app/",
     imageUrl: trailermaxImg,
