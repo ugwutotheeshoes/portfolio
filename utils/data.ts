@@ -67,7 +67,7 @@ export const projectsData = [
     title: "Sevanis",
     description:
     "An e-commerce furniture store.",
-    tags: ["React", "CSS", "Stripe"],
+    tags: ["React", "Auth0", "Stripe"],
     url: "https://sevanis.netlify.app/",
     imageUrl: sevanisImg,
   },
