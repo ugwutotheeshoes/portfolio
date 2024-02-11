@@ -7,6 +7,10 @@ import moneyImg from "@/utils/assets/money.jpg";
 import calenderImg from "@/utils/assets/calender.jpg";
 import sevanisImg from "@/utils/assets/Sevanis.png";
 import trailermaxImg from "@/utils/assets/trailermax.png";
+import BillImg from "@/utils/assets/Bill.png";
+import popcornreactImg from "@/utils/assets/popcornreact.png";
+import worldwiseImg from "@/utils/assets/worldwise.png";
+import popcornNativeImg from "@/utils/assets/popcorn-native.jpeg";
 
 
 export const links = [
@@ -67,12 +71,44 @@ export const projectsData = [
     imageUrl: sevanisImg,
   },
   {
-    title: "TrailerMax",
+    title: "Popcorn",
     description:
-      "A movie streaming site.",
-    tags: ["React", "CSS", "RestAPI"],
-    url: "https://trailermax.netlify.app/",
-    imageUrl: trailermaxImg,
+      "An app to keep track of movies you've watched.",
+    tags: ["React", "CSS", "TMDBAPI"],
+    url: "https://poppedcorn.netlify.app/",
+    imageUrl: popcornreactImg,
+  },
+  {
+    title: "Bill-n-Split",
+    description:
+      "An app to split a bill among friends.",
+    tags: ["React", "CSS"],
+    url: "https://bill-n-split.netlify.app/",
+    imageUrl: BillImg,
+  },
+  {
+    title: "Worldwise",
+    description:
+      "A world map that tracks your footsteps into every city you can think of",
+    tags: ["React", "Vite", "React Leaflet" ],
+    url: "https://wurldwise.netlify.app/",
+    imageUrl: worldwiseImg,
+  },
+  {
+    title: "Jobber",
+    description:
+      "A recruitment and job search application.",
+    tags: ["React Native", "Expo", "RapidAPI" ],
+    url: "https://github.com/ugwutotheeshoes/react-native-jobs",
+    imageUrl: popcornNativeImg,
+  },
+  {
+    title: "Popcorn",
+    description:
+      "This is a movie renting app built with React Native, JavaScript, React Query, and Redux.",
+    tags: ["React Native", "React Query", "Redux", "TMDBAPI" ],
+    url: "https://github.com/ugwutotheeshoes/popcorn-react-native",
+    imageUrl: popcornNativeImg,
   },
 ] as const;
 
