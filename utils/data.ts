@@ -11,6 +11,7 @@ import BillImg from "@/utils/assets/Bill.png";
 import popcornreactImg from "@/utils/assets/popcornreact.png";
 import worldwiseImg from "@/utils/assets/worldwise.png";
 import popcornNativeImg from "@/utils/assets/popcorn-native.jpeg";
+import jobberImg from "@/utils/assets/jobber.jpeg";
 
 
 export const links = [
@@ -99,8 +100,8 @@ export const projectsData = [
     description:
       "A recruitment and job search application.",
     tags: ["React Native", "Expo", "RapidAPI" ],
-    url: "https://github.com/ugwutotheeshoes/react-native-jobs",
-    imageUrl: popcornNativeImg,
+    url: "https://github.com/ugwutotheeshoes/jobs",
+    imageUrl: jobberImg,
   },
   {
     title: "Popcorn",
