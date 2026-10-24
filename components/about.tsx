@@ -14,11 +14,11 @@ export default function About() {
       id="about"
     >
       <p>
-      Dedicated and results-driven Frontend Developer with a passion for creating visually 
-      appealing and user-friendly web applications. Proficient in modern web technologies, 
-      such as React, React-Native, and Next.js. Adept at collaborating with cross-functional teams to 
-      bring innovative designs to life and optimize user experiences. 
-      Strong problem-solving skills and a commitment to staying up-to-date with industry trends.
+      Full-stack engineer building responsive, user-friendly web and mobile interfaces with
+      React, React Native, Next.js, and Nuxt.js. I've shipped 50+ demo applications and written
+      technical content reaching an estimated 100,000+ readers. I work across the full frontend
+      lifecycle (UI architecture, API integration, performance, and testing) and have
+      independently owned frontend systems for startups and edutech platforms.
       </p>
     </motion.section>
   );

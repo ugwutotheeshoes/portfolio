@@ -1,17 +1,19 @@
 import React from "react";
+import { StaticImageData } from "next/image";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import testingImg from "@/utils/assets/testing.jpg";
-import moneyImg from "@/utils/assets/money.jpg";
-import calenderImg from "@/utils/assets/calender.jpg";
 import sevanisImg from "@/utils/assets/Sevanis.png";
-import trailermaxImg from "@/utils/assets/trailermax.png";
-import BillImg from "@/utils/assets/Bill.png";
-import popcornreactImg from "@/utils/assets/popcornreact.png";
 import worldwiseImg from "@/utils/assets/worldwise.png";
-import popcornNativeImg from "@/utils/assets/popcorn-native.jpeg";
-import jobberImg from "@/utils/assets/jobber.jpeg";
+import kwuoImg from "@/utils/assets/kwuo.jpg";
+import omsTrackerImg from "@/utils/assets/oms-tracker.jpg";
+import izuWebImg from "@/utils/assets/izu-web.jpg";
+import izuPlayImg from "@/utils/assets/izu-play.jpg";
+import auto808Img from "@/utils/assets/auto808.jpg";
+import abTestImg from "@/utils/assets/ab-test.jpg";
+import productVariationsImg from "@/utils/assets/product-variations.jpg";
+import midjourneyImg from "@/utils/assets/midjourney.jpg";
+import dalleManagerImg from "@/utils/assets/dalle-manager.jpg";
+import rnUiLibrariesImg from "@/utils/assets/rn-ui-libraries.jpg";
 
 
 export const links = [
@@ -43,26 +45,101 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Front-End Developer",
-    company: "HNG",
-    location: "Lagos, NG",
-    description:
-      "Collaborated on projects with team members from different fields of software engineering to build scalable web applications.",
+    title: "Full-Stack Developer",
+    company: "OMS Labs",
+    location: "Virginia, US",
+    description: [
+      "Sole frontend engineer, owning UI architecture and implementation decisions across the platform.",
+      "Built a multi-admin dashboard for 50+ staff, replacing a single-login WordPress workflow with role-based credentials and per-session login tracking.",
+      "Architected the admin-to-frontend data flow so content edits reflect on the live site instantly.",
+      "Built a centralized complaint/feedback system with automated email notifications.",
+      "Designed and built the OMS Teachings Tracker Tool, used by 100+ members to track 350+ teachings.",
+    ],
     icon: React.createElement(CgWorkAlt),
-    date: "June 2020 - August 2020",
+    date: "January 2025 - Present",
   },
   {
-    title: "Technical Writer",
+    title: "Mobile Development Engineer Intern",
+    company: "Spacemates",
+    location: "Oslo, NO",
+    description: [
+      "Built 7+ core UI screens (search, listings, booking, and user profiles) in a 3-person mobile team.",
+      "Implemented geolocation-based discovery of nearby rental listings across multiple cities.",
+      "Improved responsiveness with code splitting, lazy loading, and image optimization.",
+      "Integrated backend APIs for authentication, search, booking, and messaging, backed by unit tests.",
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "January 2024 - May 2024",
+  },
+  {
+    title: "Frontend Engineer & Technical Writer",
     company: "Hackmamba",
     location: "Delaware, US",
-    description:
-      "I focus on creating valuable technical content to guide developers on different use cases of client products.",
+    description: [
+      "Built 50+ demo applications with React, Next.js, and Nuxt.js to showcase product capabilities.",
+      "Authored technical articles reaching 10,000+ readers on dev.to alone, with an estimated combined reach of up to 100,000.",
+      "Collaborated with product teams so demos and articles reflected audience needs and desired UX.",
+    ],
     icon: React.createElement(CgWorkAlt),
-    date: "September 2021 - Present",
+    date: "September 2021 - May 2025",
+  },
+  {
+    title: "B.Eng., Computer Engineering",
+    company: "Bells University of Technology",
+    location: "Ogun, NG",
+    description: [],
+    icon: React.createElement(LuGraduationCap),
+    date: "",
   },
 ] as const;
 
-export const projectsData = [
+type Project = {
+  title: string;
+  description: string;
+  tags: readonly string[];
+  url?: string;
+  imageUrl?: StaticImageData;
+};
+
+export const projectsData: readonly Project[] = [
+  {
+    title: "Kwuo",
+    description: "A site to learn Igbo using text, video, and interactive games.",
+    tags: ["TypeScript", "React", "Node.js", "MongoDB", "Tailwind", "Zod", "TanStack"],
+    url: "https://kwuo.xyz",
+    imageUrl: kwuoImg,
+  },
+  {
+    title: "OMS Tracker Tool",
+    description: "A tracker tool to help edutech members follow their learning journey.",
+    tags: ["React", "Node.js", "MongoDB", "Tailwind", "EmailJS"],
+    url: "https://omslabsprojects.com/tracker-tool",
+    imageUrl: omsTrackerImg,
+  },
+  {
+    title: "Izu Igbo Calendar (Web)",
+    description:
+      "An interface to browse and convert Gregorian dates across a 120-year span of Igbo market data.",
+    tags: ["TypeScript", "React", "Node.js", "MongoDB"],
+    url: "https://izuigbocalendar.com",
+    imageUrl: izuWebImg,
+  },
+  {
+    title: "Izu Igbo Calendar (Mobile)",
+    description:
+      "An Android app mapping the Igbo 4-day market week to the Gregorian calendar. Live on Google Play.",
+    tags: ["React Native", "Expo", "MongoDB", "TypeScript"],
+    url: "https://play.google.com/store/apps/details?id=com.calendar.izuigbo",
+    imageUrl: izuPlayImg,
+  },
+  {
+    title: "Auto808",
+    description:
+      "A car dealership web app for browsing new and used vehicle inventory with financing information.",
+    tags: ["React", "Tailwind", "EmailJS", "MongoDB"],
+    url: "https://auto808.netlify.app/",
+    imageUrl: auto808Img,
+  },
   {
     title: "Sevanis",
     description:
@@ -72,22 +149,6 @@ export const projectsData = [
     imageUrl: sevanisImg,
   },
   {
-    title: "Popcorn",
-    description:
-      "An app to keep track of movies you've watched.",
-    tags: ["React", "CSS", "TMDBAPI"],
-    url: "https://poppedcorn.netlify.app/",
-    imageUrl: popcornreactImg,
-  },
-  {
-    title: "Bill-n-Split",
-    description:
-      "An app to split a bill among friends.",
-    tags: ["React", "CSS"],
-    url: "https://bill-n-split.netlify.app/",
-    imageUrl: BillImg,
-  },
-  {
     title: "Worldwise",
     description:
       "A world map that tracks your footsteps into every city you can think of",
@@ -95,59 +156,68 @@ export const projectsData = [
     url: "https://wurldwise.netlify.app/",
     imageUrl: worldwiseImg,
   },
-  {
-    title: "Jobber",
-    description:
-      "A recruitment and job search application.",
-    tags: ["React Native", "Expo", "RapidAPI" ],
-    url: "https://github.com/ugwutotheeshoes/jobs",
-    imageUrl: jobberImg,
-  },
-  {
-    title: "Popcorn",
-    description:
-      "This is a movie renting app built with React Native, JavaScript, React Query, and Redux.",
-    tags: ["React Native", "React Query", "Redux", "TMDBAPI" ],
-    url: "https://github.com/ugwutotheeshoes/popcorn-react-native",
-    imageUrl: popcornNativeImg,
-  },
-] as const;
+];
 
 export const articlesData = [
   {
-    title: "Build a crypto gift card store with Refine, Reloadly, and Stripe",
+    title: "A/B Test Visual Assets With DAM for Data-Driven Campaigns",
     description:
-      "This article discusses using Node.js, Refine, Reloadly’s, and Stripe’s Session API to build a crypto gift card store.",
-    tags: ["Refine", "Node.js", "Reloadly", "Stripe"],
-    url: "https://ugwu.hashnode.dev/build-a-crypto-gift-card-store-with-refine-reloadly-and-stripe",
-    imageUrl: moneyImg,
+      "Optimize visual assets with A/B testing using Cloudinary DAM: automate workflows, generate asset variations, and analyze the results.",
+    tags: ["Cloudinary", "DAM", "A/B Testing"],
+    url: "https://cloudinary.com/blog/a-b-test-visual-assets-dam-data-driven-campaigns",
+    imageUrl: abTestImg,
   },
   {
-    title: "Testing Next.js components using Cypress",
+    title: "How to Test Product Image Variations for Higher Conversions",
     description:
-      "This article reveals the similarities and differences between Cypress testing techniques and how to run tests in a Next.js application.",
-    tags: ["React", "Cypress", "Tutorial"],
-    url: "https://ugwu.hashnode.dev/testing-nextjs-components-using-cypress",
-    imageUrl: testingImg,
+      "Improve product image performance with Cloudinary by generating variations, automating testing, and tracking engagement.",
+    tags: ["Cloudinary", "E-commerce", "Tutorial"],
+    url: "https://cloudinary.com/blog/test-product-image-variations-higher-conversions",
+    imageUrl: productVariationsImg,
   },
   {
-    title: "Securing health data: A guide to implementing privacy and security in Next.js",
+    title: "Customize Midjourney Images for Your E-commerce Website",
     description:
-      "This article discusses safeguarding sensitive user data using Appwrite’s out-of-the-box functionalities.",
-    tags: ["Next.js", "Appwrite", "Tutorial"],
-    url: "https://dev.to/hackmamba/securing-health-data-a-guide-to-implementing-privacy-and-security-in-nextjs-5c",
-    imageUrl: calenderImg,
+      "Use Cloudinary to turn AI-generated Midjourney images into polished visuals for an e-commerce store.",
+    tags: ["Cloudinary", "Midjourney", "AI"],
+    url: "https://cloudinary.com/blog/customize-midjourney-images-e-commerce",
+    imageUrl: midjourneyImg,
+  },
+  {
+    title: "Building an AI Image Manager With DALL-E and Cloudinary",
+    description:
+      "Generate images with DALL-E 3 and store, organize, and deliver them with Cloudinary in a Next.js app.",
+    tags: ["Next.js", "OpenAI", "Cloudinary"],
+    url: "https://cloudinary.com/blog/building-ai-image-manager-dall-e-cloudinary",
+    imageUrl: dalleManagerImg,
+  },
+  {
+    title: "Exploring the Best UI Component Libraries for React Native apps",
+    description:
+      "A tour of UI component libraries that solve consistent design language and responsive layouts in React Native.",
+    tags: ["React Native", "UI", "Mobile"],
+    url: "https://dev.to/ugwutotheeshoes/exploring-the-best-ui-component-libraries-for-react-native-apps-p5c",
+    imageUrl: rnUiLibrariesImg,
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
+  "HTML/CSS",
   "JavaScript",
+  "TypeScript",
   "React",
-  "React-Native",
+  "React Native",
+  "Expo",
   "Next.js",
+  "Vue",
   "Nuxt.js",
-  "Git",
+  "Redux",
+  "TanStack Query",
+  "Zod",
   "Tailwind",
+  "Styled Components",
+  "Node.js",
+  "MongoDB",
+  "Git/GitHub",
+  "Docker",
 ] as const;

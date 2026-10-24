@@ -10,18 +10,24 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/utils/data";
 import { useSectionInView } from "@/utils/hooks";
 import { useTheme } from "@/context/theme-context";
+import { useInView } from "react-intersection-observer";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", 0.3);
   const { theme } = useTheme();
+  // The timeline's built-in observer never fires under the App Router,
+  // so drive its visibility ourselves.
+  const { ref: timelineRef, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
+      <div ref={timelineRef}>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
+              visible={inView}
               contentStyle={{
                 background:
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
@@ -47,13 +53,18 @@ export default function Experience() {
               <h2 className="font-bold !mt-0 uppercase text-gray-900 dark:text-white/75">{item.company}</h2>
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="italic font-thin text-slate-500 !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
-              </p>
+              {item.description.length > 0 && (
+                <ul className="!mt-1 list-disc pl-4 space-y-1 !font-normal text-gray-700 dark:text-white/75">
+                  {item.description.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              )}
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
       </VerticalTimeline>
+      </div>
     </section>
   );
 }

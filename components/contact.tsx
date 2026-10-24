@@ -10,7 +10,6 @@ import { FaGithubSquare } from "react-icons/fa";
 // import { useSectionInView } from "@/utils/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import Link from "next/link";
-import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
 
 export default function Contact() {

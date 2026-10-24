@@ -21,6 +21,7 @@ export default function ProjectCard({
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const Wrapper = url ? "a" : "div";
 
   return (
     <motion.div
@@ -31,9 +32,17 @@ export default function ProjectCard({
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-      <a href={url} target="_blank">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+      <section
+        className={`bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 ${
+          imageUrl ? "sm:h-[20rem]" : ""
+        }`}
+      >
+      <Wrapper {...(url ? { href: url, target: "_blank" } : {})}>
+        <div
+          className={`pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 flex flex-col h-full ${
+            imageUrl ? "sm:max-w-[50%] sm:group-even:ml-[18rem]" : ""
+          }`}
+        >
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
@@ -50,7 +59,7 @@ export default function ProjectCard({
           </ul>
         </div>
 
-        <Image
+        {imageUrl && <Image
           src={imageUrl}
           alt="Project I worked on"
           quality={95}
@@ -66,8 +75,8 @@ export default function ProjectCard({
         group-even:group-hover:rotate-2
 
         group-even:right-[initial] group-even:-left-40"
-        />
-        </a>
+        />}
+        </Wrapper>
       </section>
     </motion.div>
   );
