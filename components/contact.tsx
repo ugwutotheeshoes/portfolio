@@ -2,7 +2,7 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useSectionInView } from "@/utils/hooks";
 import { BsArrowRight, BsLinkedin, BsEnvelope } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";

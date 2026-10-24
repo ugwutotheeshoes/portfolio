@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { articlesData } from "@/utils/data";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "motion/react";
 
 type ArticleProps = (typeof articlesData)[number];
 

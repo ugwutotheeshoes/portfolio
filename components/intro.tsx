@@ -3,7 +3,7 @@
 import About from "@/components/about";
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/utils/hooks";
 
