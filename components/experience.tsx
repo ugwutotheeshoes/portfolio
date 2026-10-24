@@ -50,11 +50,11 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h2 className="font-bold !mt-0 uppercase text-gray-900 dark:text-white/75">{item.company}</h2>
+              <h2 className="font-bold mt-0! uppercase text-gray-900 dark:text-white/75!">{item.company}</h2>
               <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="italic font-thin text-slate-500 !mt-0">{item.location}</p>
+              <p className="italic font-thin text-slate-500 mt-0!">{item.location}</p>
               {item.description.length > 0 && (
-                <ul className="!mt-1 list-disc pl-4 space-y-1 !font-normal text-gray-700 dark:text-white/75">
+                <ul className="mt-1! list-disc pl-4 space-y-1 font-normal! text-gray-700 dark:text-white/75">
                   {item.description.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}

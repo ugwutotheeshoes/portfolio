@@ -36,6 +36,9 @@ export default function ThemeContextProvider({
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
 
     if (localTheme) {
+      // Read after mount on purpose: the server can't see localStorage,
+      // so reading it during render would cause a hydration mismatch.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme(localTheme);
 
       if (localTheme === "dark") {
