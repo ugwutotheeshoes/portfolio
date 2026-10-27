@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import sevanisImg from "@/utils/assets/Sevanis.png";
 import worldwiseImg from "@/utils/assets/worldwise.png";
 import kwuoImg from "@/utils/assets/kwuo.jpg";
+import iluFinderImg from "@/utils/assets/ilu-finder.jpg";
 import omsTrackerImg from "@/utils/assets/oms-tracker.jpg";
 import izuWebImg from "@/utils/assets/izu-web.jpg";
 import izuPlayImg from "@/utils/assets/izu-play.jpg";
@@ -104,10 +105,17 @@ type Project = {
 export const projectsData: readonly Project[] = [
   {
     title: "Kwuo",
-    description: "A site to learn Igbo using text, video, and interactive games.",
+    description: "Interactive games for learning Igbo, with text and voice chat on the way.",
     tags: ["TypeScript", "React", "Node.js", "MongoDB", "Tailwind", "Zod", "TanStack"],
     url: "https://kwuo.xyz",
     imageUrl: kwuoImg,
+  },
+  {
+    title: "Ilu Finder",
+    description: "A searchable database of Igbo proverbs with their meanings and recordings.",
+    tags: ["React", "JavaScript", "Vite", "Tailwind", "React Router"],
+    url: "https://ilufinder.com",
+    imageUrl: iluFinderImg,
   },
   {
     title: "OMS Tracker Tool",
