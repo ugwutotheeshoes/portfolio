@@ -9,7 +9,8 @@ import iluFinderImg from "@/utils/assets/ilu-finder.jpg";
 import omsTrackerImg from "@/utils/assets/oms-tracker.jpg";
 import izuWebImg from "@/utils/assets/izu-web.jpg";
 import izuPlayImg from "@/utils/assets/izu-play.jpg";
-import auto808Img from "@/utils/assets/auto808.jpg";
+import autos180Img from "@/utils/assets/180-autos.jpg";
+import oddmanImg from "@/utils/assets/oddman.jpg";
 import abTestImg from "@/utils/assets/ab-test.jpg";
 import productVariationsImg from "@/utils/assets/product-variations.jpg";
 import midjourneyImg from "@/utils/assets/midjourney.jpg";
@@ -111,6 +112,22 @@ export const projectsData: readonly Project[] = [
     imageUrl: kwuoImg,
   },
   {
+    title: "Oddman",
+    description:
+      "A storefront, admin dashboard and API for a streetwear label, built on one design system of 1px lines. Paystack checkout, size guides and order triage.",
+    tags: ["TypeScript", "React", "Tailwind", "Express", "MongoDB", "Paystack"],
+    url: "https://aga1nstallodds.netlify.app/shop",
+    imageUrl: oddmanImg,
+  },
+  {
+    title: "180 Autos",
+    description:
+      "A car dealership site with a scroll-driven pixel-art hero, live inventory, test-drive and appraisal bookings, and a secure admin with photo uploads.",
+    tags: ["TypeScript", "React", "Tailwind", "Netlify Functions", "MongoDB", "Cloudinary"],
+    url: "https://180autos.netlify.app/",
+    imageUrl: autos180Img,
+  },
+  {
     title: "Ilu Finder",
     description: "A searchable database of Igbo proverbs with their meanings and recordings.",
     tags: ["React", "JavaScript", "Vite", "Tailwind", "React Router"],
@@ -139,14 +156,6 @@ export const projectsData: readonly Project[] = [
     tags: ["React Native", "Expo", "MongoDB", "TypeScript"],
     url: "https://play.google.com/store/apps/details?id=com.calendar.izuigbo",
     imageUrl: izuPlayImg,
-  },
-  {
-    title: "Auto808",
-    description:
-      "A car dealership web app for browsing new and used vehicle inventory with financing information.",
-    tags: ["React", "Tailwind", "EmailJS", "MongoDB"],
-    url: "https://auto808.netlify.app/",
-    imageUrl: auto808Img,
   },
   {
     title: "Sevanis",
